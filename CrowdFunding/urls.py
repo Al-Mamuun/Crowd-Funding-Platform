@@ -5,7 +5,8 @@ from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('HomeApp.urls')),  # Include HomeAPP URLs
+    path('', include('HomeAPP.urls')),  # Include HomeAPP URLs
+    path('dropdown/', include('DropDown.urls')),  # Include DropDown URLs
 ]
 
 # Media files for development

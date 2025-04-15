@@ -15,7 +15,7 @@
   }
 
   .hero-image {
-    background-image: url("{% static 'donation.jpeg' %}");
+    background-image: url("{% static 'images/donation.jpeg' %}");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -377,7 +377,7 @@ footer {
   <div class="modal-content">
     <span class="close">&times;</span>
     <h3>Donate to Flood Relief</h3>
-    <form action="{#}" method="POST">
+    <form action="{% url 'thank_you' %}" method="POST">
       {% csrf_token %}
       <button type="submit" class="btn btn-gradient">Donate Now</button>
     </form>
@@ -450,7 +450,7 @@ footer {
               Community Clean-up
             </li>
           </ul>
-          <a href="{#}" class="btn btn-light mt-3">See all</a>
+          <a href="{% url 'project_list' %}" class="btn btn-light mt-3">See all</a>
         </div>
       </div>
     </div>
@@ -481,7 +481,7 @@ footer {
               Build a House
             </li>
           </ul>
-          <a href="{#}" class="btn btn-light mt-3">See all</a>
+          <a href="{% url 'feature_projects' %}" class="btn btn-light mt-3">See all</a>
         </div>
       </div>
     </div>
@@ -490,10 +490,58 @@ footer {
 
 <!-- Create Your Own Project Button -->
 <div class="text-center my-5">
-  <a href="{#}" class="btn btn-gradient">Create your own Project</a>
+  <a href="{% url 'upload' %}" class="btn btn-gradient">Create your own Project</a>
 </div>
 
 
+
+<div class="about-us-container">
+  <div class="about-us-header">
+      <h1>Our Team</h1>
+      <p>We are a team of passionate individuals striving to make a difference with every project we undertake.</p>
+  </div>
+
+  <div class="team">
+      <!-- Team Member 1 -->
+      <div class="team-member">
+          <img src="{% static 'images/mamun.jpg' %}" alt="Team Member 1">
+          <h2>Abdullah Al-Mamun</h2>
+          <h4><i class="bi bi-person-check-fill"></i> Lead Developer</h4>
+          <p>Mamun is a backend specialist with expertise in Python and Django. He thrives on tackling challenging problems.</p>
+          <div class="social-icons">
+              <a href="https://github.com/Al-Mamuun" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="http://facebook.com/AlMamuunn/" target="_blank"><i class="fab fa-facebook"></i></a>
+          </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="team-member">
+          <img src="{% static 'images/nabila.jpg' %}" alt="Team Member 2">
+          <h2>Anika Nawer Nabila</h2>
+          <h4>Frontend Designer</h4>
+          <p>Nabila excels at creating beautiful and user-friendly designs, ensuring an exceptional user experience.</p>
+          <div class="social-icons">
+              <a href="https://github.com/Nawer-Nabila" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="http://facebook.com/nawer.nabila.7" target="_blank"><i class="fab fa-facebook"></i></a>
+          </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="team-member">
+          <img src="{% static 'images/kayes.jpg' %}" alt="Team Member 3">
+          <h2>Kayes Ahammed Biplob</h2>
+          <h4>Project Manager</h4>
+          <p>Kayes ensures seamless communication and coordination to deliver projects on time.</p>
+          <div class="social-icons">
+              <a href="https://github.com/KayesBiplob" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="http://facebook.com/kayesahamed.biplob" target="_blank"><i class="fab fa-facebook"></i></a>
+          </div>
+      </div> 
+  </div>
+</div>
 
 <!-- Footer -->
 <footer>
@@ -502,15 +550,15 @@ footer {
       <div class="col-md-4">
         <h5>About Us</h5>
         <p>We are a team dedicated to raising funds for people who need assistance after the devastating floods in Bangladesh.</p>
-        <a href="{#}" class="btn" style="background: linear-gradient(to right, #ff7e5f, #feb47b); color: white;"">Learn More</a>
+        <a href="{% url 'about'%}" class="btn" style="background: linear-gradient(to right, #ff7e5f, #feb47b); color: white;"">Learn More</a>
       </div>
       <div class="col-md-4">
         <h5>Quick Links</h5>
         <ul>
-                  <li><a href="{#}">Home</a></li>
-                  <li><a href="{#}">Education</a></li>
-                  <li><a href="{#}">Medical</a></li>
-                  <li><a href="{#}">Business</a></li>
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'education' %}">Education</a></li>
+                  <li><a href="{% url 'medical' %}">Medical</a></li>
+                  <li><a href="{% url 'business' %}">Business</a></li>
         </ul>
       </div>
       <div class="col-md-4">
@@ -522,7 +570,7 @@ footer {
       </div>
     </div>
   </div>
-  <p class="text-center mb-0">© 2025 Crowdfunding Platform. All Rights Reserved. Made 
+  <p class="text-center mb-0">© 2024 Crowdfunding Platform. All Rights Reserved. Made 
     <span class="text-danger">&hearts;</span> by the Team Intelligence Hub</p>
 </footer>
 

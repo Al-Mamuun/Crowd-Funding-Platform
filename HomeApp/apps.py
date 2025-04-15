@@ -1,6 +1,9 @@
 from django.apps import AppConfig
 
-
-class HomeappConfig(AppConfig):
+class HomeAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'HomeApp'
+    name = 'HomeAPP'
+
+    def ready(self):
+        import HomeAPP.signals 
+        
