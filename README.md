@@ -1,3 +1,3 @@
-# Crowd-Funding-Platform
+# Crowd-Funding-Platform 🚀
 
-CrowdfundX 🚀 is a Django-powered crowdfunding platform for secure & seamless fundraising. Built for CSE 322 - Software Engineering Lab, it lets users create campaigns, 💡 receive donations 💰 & track progress 📊..
+CrowdfundX is a Django-powered crowdfunding platform designed to make fundraising secure, easy, and seamless. Built as part of the CSE 322 - Software Engineering Lab, CrowdfundX allows users to create campaigns, receive donations, and track the progress 📊 of their fundraising efforts.
