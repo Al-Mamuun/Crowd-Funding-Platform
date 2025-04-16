@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.conf import settings
 from .forms import *
-from .models import *
+from .models import Project, FeatureProject, Profile, Donation, Comment, Rating
 
 def home(request):
     total_donors = Donation.objects.count()
