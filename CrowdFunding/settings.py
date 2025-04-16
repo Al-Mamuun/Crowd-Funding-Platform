@@ -94,6 +94,7 @@ USE_TZ = True
 
 
 
+## Media and static files
 
 STATIC_URL = 'static/'
 
