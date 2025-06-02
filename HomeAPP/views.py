@@ -100,8 +100,10 @@ def donate_to_project(request, id):
                 messages.error(request, "Please enter a valid amount.")
         except (ValueError, TypeError):
             messages.error(request, "Invalid amount entered.")
-        return redirect('details', id=project.id)
-    return redirect('details', id=project.id)
+        
+        return redirect('profile_dashboard')  # ✅ Redirect to profile after donation
+    
+    return redirect('details', id=project.id)  # fallback for non-POST
 
 def comment_on_project(request, id):
     project = get_object_or_404(Project, id=id)
